@@ -128,12 +128,10 @@ app.post('/print', (req, res) => {
         // Daten abfangen
         console.log('Eingehende Bestellung:', req.body);
         const { auswahl, bestellung } = req.body;
-        const { nr, speisen, gesamtpreis, eingangszeit, abholzeit } = bestellung;
+        const { nr, speisen, gesamtpreis, eingangszeit, abholzeit, liefergebuehr } = bestellung;
 
         // Daten formatieren
-        console.log("vorher:", speisen);
         const formattedSpeisen = formatSpeisen(speisen);
-        console.log("formatiert:", formattedSpeisen);
         const eingang = formatTime(new Date(eingangszeit));
         const abhol = formatTime(new Date(abholzeit));
         const summe = gesamtpreis.toFixed(2);
@@ -203,7 +201,7 @@ app.post('/print', (req, res) => {
             if (lieferDetails.liefergebuehr) {
                 printer
                     .size(0.5, 0.5)
-                    .text(`Liefergebühr: ${liefergebuehr} EUR`)
+                    .text(`Liefergebühr: ${liefergebuehr.toFixed(2)} EUR`)
             }
             printer
                 .size(0.7, 0.7)

@@ -98,9 +98,10 @@ function formatSpeisen(speisen) {
 }
 
 function formatLieferung(bestellung) {
-    const { name, telefon, strasse, hausnummer, liefernotiz } = bestellung;
+    const { liefergebuehr, name, telefon, strasse, hausnummer, liefernotiz } = bestellung;
 
     let lieferDetails = {
+        liefergebuehr: liefergebuehr,
         name: name || '',
         telefon: telefon || '',
         adresse: '',
@@ -199,6 +200,12 @@ app.post('/print', (req, res) => {
             printer
                 .feed(1)
                 .align("CT")
+            if (lieferDetails.liefergebuehr) {
+                printer
+                    .size(0.5, 0.5)
+                    .text(`Liefergebühr: ${liefergebuehr} EUR`)
+            }
+            printer
                 .size(0.7, 0.7)
                 .text(`Total: ${summe} EUR`)
                 .feed(2)
@@ -206,6 +213,7 @@ app.post('/print', (req, res) => {
             if (lieferDetails) {
                 printer.
                     feed(1).align("LT")
+
                 if (lieferDetails.name) {
                     printer
                         .size(0.5, 0.5).text("Name:")
@@ -215,10 +223,12 @@ app.post('/print', (req, res) => {
                     printer
                         .size(0.5, 0.5).text("Telefon:")
                 }
-                printer
-                    .size(0.7, 0.7).text(lieferDetails.telefon)
-                    .size(0.5, 0.5).text("Strasse:")
-                    .size(0.7, 0.7).text(lieferDetails.adresse)
+                if (lieferDetails.strasse) {
+                    printer
+                        .size(0.7, 0.7).text(lieferDetails.telefon)
+                        .size(0.5, 0.5).text("Strasse:")
+                        .size(0.7, 0.7).text(lieferDetails.adresse)
+                }
                 if (lieferDetails.hinweis) {
                     printer
                         .size(0.5, 0.5).text("Hinweis:")

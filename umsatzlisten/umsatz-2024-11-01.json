@@ -207,5 +207,60 @@
       "abholzeit": "2024-11-01T09:37:10.209Z"
     },
     "timestamp": "2024-11-01T09:39:12.345Z"
+  },
+  {
+    "auswahl": "vor Ort",
+    "bestellung": {
+      "nr": 1,
+      "speisen": [
+        {
+          "id": 935627,
+          "speise": {
+            "nr": 2,
+            "name": "Gyros Box",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 8.5,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "ohne",
+                "menge": 1
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8.5,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 8.5,
+      "eingangszeit": "2024-11-01T12:03:55.610Z",
+      "abholzeit": "2024-11-01T12:03:55.610Z"
+    },
+    "timestamp": "2024-11-01T12:04:03.277Z"
   }
 ]

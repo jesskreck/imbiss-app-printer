@@ -1,0 +1,211 @@
+[
+  {
+    "auswahl": "vor Ort",
+    "bestellung": {
+      "nr": 21,
+      "speisen": [
+        {
+          "id": 938013,
+          "speise": {
+            "nr": 16,
+            "name": "Gyros mit Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 9.5,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 326483,
+          "speise": {
+            "nr": 20,
+            "name": "Gyros mit Tzaziki und Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 8,
+          "notiz": "",
+          "size": "klein",
+          "aufpreis": 0
+        },
+        {
+          "id": 615512,
+          "speise": {
+            "nr": 37,
+            "name": "Greek Bowl",
+            "zutaten": [
+              {
+                "name": "Salat",
+                "menge": 1
+              }
+            ],
+            "option": [
+              {
+                "name": "Feta",
+                "menge": 0
+              },
+              {
+                "name": "Gyros",
+                "menge": 0,
+                "preis": 2
+              },
+              {
+                "name": "Hähnchen",
+                "menge": 1,
+                "preis": 2
+              },
+              {
+                "name": "Suflaki",
+                "menge": 0,
+                "preis": 2
+              },
+              {
+                "name": "Bifteki",
+                "menge": 0,
+                "überbacken": true,
+                "preis": 2.5
+              }
+            ],
+            "preis": 9,
+            "sauce": [
+              {
+                "name": "Joghurt",
+                "menge": 0
+              },
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Essig Öl",
+                "menge": 1
+              },
+              {
+                "name": "Granatapfel",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 11,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 2
+        },
+        {
+          "id": 999793,
+          "speise": {
+            "nr": 38,
+            "name": "Softgetränke",
+            "zutaten": [],
+            "option": [
+              {
+                "name": "Cola",
+                "menge": 0
+              },
+              {
+                "name": "Fanta",
+                "menge": 0
+              },
+              {
+                "name": "Sprite",
+                "menge": 1
+              },
+              {
+                "name": "Schorle",
+                "menge": 0
+              },
+              {
+                "name": "Multi",
+                "menge": 0
+              }
+            ],
+            "preis": 2.8
+          },
+          "menge": 1,
+          "gesamtpreis": 2.8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 31.3,
+      "eingangszeit": "2024-11-01T09:37:10.209Z",
+      "abholzeit": "2024-11-01T09:37:10.209Z"
+    },
+    "timestamp": "2024-11-01T09:39:12.345Z"
+  }
+]

@@ -97,6 +97,36 @@ function formatSpeisen(speisen) {
     });
 }
 
+function generateLists(speisen) {
+    const zutatenListe = [];
+    const optionListe = [];
+    const saucenListe = [];
+  
+    // Suche nach "Kraut" und "Zwiebeln" in den Zutaten und füge sie zur Liste hinzu, falls vorhanden
+    if (speise.zutaten) {
+      zutatenListe.push(
+        ...speise.zutaten.filter(zutat => zutat.name === "Kraut" || zutat.name === "Zwiebeln")
+      );
+    }
+  
+    // Prüfe, ob Optionen vorhanden sind und füge sie zur optionListe hinzu
+    if (speise.option) {
+      optionListe.push(...speise.option);
+    }
+  
+    // Prüfe, ob Saucen vorhanden sind und füge sie zur saucenListe hinzu
+    if (speise.sauce) {
+      saucenListe.push(...speise.sauce);
+    }
+  
+    // Rückgabe der Listen in einem Objekt
+    return {
+      zutatenListe,
+      optionListe,
+      saucenListe
+    };
+}
+
 function formatLieferung(bestellung) {
     const { liefergebuehr, name, telefon, strasse, hausnummer, liefernotiz } = bestellung;
 
@@ -183,16 +213,22 @@ app.post('/print', (req, res) => {
                 .align("LT")
 
             formattedSpeisen.forEach((speise) => {
+                const einzelpreis = speise.gesamtpreis / speise.menge;
+                const preisText = speise.menge >= 2
+                    ? `${speise.menge} x ${einzelpreis.toFixed(2)} EUR = ${speise.gesamtpreis.toFixed(2)} EUR`
+                    : `${speise.gesamtpreis.toFixed(2)} EUR`;
+
+
                 printer
                     .size(0.5, 0.5)
-                    .text(`${speise.size === "klein" ? `${command.TEXT_FORMAT.TXT_UNDERL2_ON}${speise.size}${command.TEXT_FORMAT.TXT_UNDERL_OFF} ` : ""}${speise.name}`)
+                    .text(speise.name)
                     .size(0.7, 0.7)
-                    .text(`${speise.menge}x Nr.${speise.nr}`)
+                    .text(`${speise.menge}x Nr.${speise.nr} ${speise.size === "klein" ? `(${command.TEXT_FORMAT.TXT_UNDERL2_ON}${speise.size}${command.TEXT_FORMAT.TXT_UNDERL_OFF})` : ""}`)
                     .size(0.5, 0.5)
                     .text(speise.zutatenListe)
                     .text(speise.notiz ? `${command.TEXT_FORMAT.TXT_UNDERL2_ON}HINWEIS: ${speise.notiz}${command.TEXT_FORMAT.TXT_UNDERL_OFF}` : "")
-                    .text(`${speise.gesamtpreis.toFixed(2)} EUR`)
-                    .feed(2)
+                    .text(preisText)
+                    .feed(2);
 
             });
 
@@ -235,7 +271,7 @@ app.post('/print', (req, res) => {
                         .size(0.7, 0.7).text(lieferDetails.hinweis)
                 }
                 printer
-                .feed(4)
+                    .feed(4)
             }
 
             printer

@@ -110,23 +110,26 @@ function generateLists(speisen) {
 
         // Filtere Zutatenliste für nur Kraut und Zwiebeln
         const zutatenListe = Array.isArray(zutaten)
-            ? zutaten.filter(zutat => zutat.name === "Kraut" || zutat.name === "Zwiebeln")
+            ? zutaten
+                .filter(zutat => (zutat.name === "Kraut" || zutat.name === "Zwiebeln") && zutat.menge > 0)
                 .map(zutat => `${zutat.menge > 1 ? `${zutat.menge}x ` : ''}${zutat.name}`)
                 .join(', ')
             : '';
 
+
         const optionListe = Array.isArray(option)
-            ? option.filter(o => o.menge > 0)
+            ? option
+                .filter(o => o.menge > 0)
                 .map(o => `${o.menge > 1 ? `${o.menge}x ` : ''}${o.name}`)
                 .join(', ')
             : '';
 
         const saucenListe = Array.isArray(sauce)
-            ? sauce.filter(s => s.menge > 0)
+            ? sauce
+                .filter(s => s.menge > 0)
                 .map(s => `${s.menge > 1 ? `${s.menge}x ` : ''}${s.name}`)
                 .join(', ')
             : '';
-
         return {
             menge,
             nr,

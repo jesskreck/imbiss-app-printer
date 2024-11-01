@@ -250,7 +250,7 @@ app.post('/print', (req, res) => {
                     printer.text(speise.saucenListe);
                 }
                 printer
-                    .text(speise.notiz ? `${command.TEXT_FORMAT.TXT_BI_ON}HINWEIS: ${speise.notiz}${command.TEXT_FORMAT.TXT_BI_OFF}` : "")
+                    .text(speise.notiz ? `${command.TEXT_FORMAT.TXT_BOLD_ON}HINWEIS: ${speise.notiz}${command.TEXT_FORMAT.TXT_BOLD_OFF}` : "")
                     .text(speise.preisText)
                     .feed(2);
 

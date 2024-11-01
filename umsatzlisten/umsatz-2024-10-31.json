@@ -1,0 +1,1962 @@
+[
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 23,
+      "speisen": [
+        {
+          "id": 458128,
+          "speise": {
+            "nr": 23,
+            "name": "Gyros-Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 10,
+      "eingangszeit": "2024-10-31T13:14:41.233Z",
+      "abholzeit": "2024-10-31T13:14:41.233Z"
+    },
+    "timestamp": "2024-10-31T13:18:24.595Z"
+  },
+  {
+    "auswahl": "Lieferung",
+    "bestellung": {
+      "nr": 1,
+      "speisen": [
+        {
+          "id": 699043,
+          "speise": {
+            "nr": 23,
+            "name": "Gyros-Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 382812,
+          "speise": {
+            "nr": 23,
+            "name": "Gyros-Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 752544,
+          "speise": {
+            "nr": 3,
+            "name": "XXL Bratwurst",
+            "zutaten": [
+              {
+                "name": "Bratwurst",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pita",
+                "menge": 1
+              }
+            ],
+            "preis": 4,
+            "sauce": [
+              {
+                "name": "Senf",
+                "menge": 1
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 4,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 24,
+      "eingangszeit": "2024-10-31T13:18:24.709Z",
+      "abholzeit": "2024-10-31T16:30:00.000Z",
+      "strasse": "Gildestr., 33442",
+      "hausnummer": "51",
+      "telefon": "01796037660",
+      "name": "Alicia maya",
+      "liefergebuehr": 3
+    },
+    "timestamp": "2024-10-31T15:59:17.689Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 2,
+      "speisen": [
+        {
+          "id": 927696,
+          "speise": {
+            "nr": 19,
+            "name": "Gyros mit Krautsalat und Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 3,
+          "gesamtpreis": 30,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 382335,
+          "speise": {
+            "nr": 16,
+            "name": "Gyros mit Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 0
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 9.5,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 541,
+          "speise": {
+            "nr": 7.1,
+            "name": "Extras (Schälchen)",
+            "zutaten": [
+              {
+                "name": "Kraut",
+                "menge": 0,
+                "preis": 3.5
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1,
+                "preis": 3.5
+              },
+              {
+                "name": "Pita",
+                "menge": 0,
+                "preis": 1
+              },
+              {
+                "name": "Peperoni",
+                "menge": 0,
+                "preis": 2.5
+              },
+              {
+                "name": "Feta",
+                "menge": 0,
+                "preis": 3.5
+              },
+              {
+                "name": "Oliven",
+                "menge": 0,
+                "preis": 3.5
+              }
+            ],
+            "preis": 0
+          },
+          "menge": 1,
+          "gesamtpreis": 3.5,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 3.5
+        }
+      ],
+      "gesamtpreis": 43,
+      "eingangszeit": "2024-10-31T15:59:17.724Z",
+      "abholzeit": "2024-10-31T15:59:17.724Z"
+    },
+    "timestamp": "2024-10-31T16:19:14.569Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 3,
+      "speisen": [
+        {
+          "id": 818688,
+          "speise": {
+            "nr": 20,
+            "name": "Gyros mit Tzaziki und Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 20,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 20,
+      "eingangszeit": "2024-10-31T16:19:14.594Z",
+      "abholzeit": "2024-10-31T16:19:14.594Z"
+    },
+    "timestamp": "2024-10-31T16:20:30.368Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 4,
+      "speisen": [
+        {
+          "id": 196266,
+          "speise": {
+            "nr": 22,
+            "name": "Gyros mit Krautsalat, Pommes und Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 11,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 3,
+          "gesamtpreis": 34.8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        }
+      ],
+      "gesamtpreis": 34.8,
+      "eingangszeit": "2024-10-31T16:20:30.396Z",
+      "abholzeit": "2024-10-31T16:20:30.396Z"
+    },
+    "timestamp": "2024-10-31T16:34:03.462Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 5,
+      "speisen": [
+        {
+          "id": 617882,
+          "speise": {
+            "nr": 35,
+            "name": "Hähnchen (überbacken)",
+            "zutaten": [
+              {
+                "name": "Hähnchen",
+                "menge": 1,
+                "überbacken": true,
+                "canToggle": false
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Hollandaise",
+                "menge": 1
+              },
+              {
+                "name": "Metaxa",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 653523,
+          "speise": {
+            "nr": 24,
+            "name": "Suflaki-Platte",
+            "zutaten": [
+              {
+                "name": "Suflaki",
+                "menge": 2,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 13,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 13.6,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        }
+      ],
+      "gesamtpreis": 23.6,
+      "eingangszeit": "2024-10-31T16:34:03.488Z",
+      "abholzeit": "2024-10-31T16:34:03.488Z"
+    },
+    "timestamp": "2024-10-31T16:40:57.737Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 6,
+      "speisen": [
+        {
+          "id": 13585,
+          "speise": {
+            "nr": 8,
+            "name": "Gyros Pita",
+            "zutaten": [
+              {
+                "name": "Pita",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Gyros",
+                "menge": 1
+              }
+            ],
+            "preis": 8,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "ohne",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 388684,
+          "speise": {
+            "nr": 8,
+            "name": "Gyros Pita",
+            "zutaten": [
+              {
+                "name": "Pita",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Gyros",
+                "menge": 1
+              }
+            ],
+            "preis": 8,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "ohne",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 16,
+      "eingangszeit": "2024-10-31T16:40:57.762Z",
+      "abholzeit": "2024-10-31T16:40:57.762Z"
+    },
+    "timestamp": "2024-10-31T16:41:42.579Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 7,
+      "speisen": [
+        {
+          "id": 320150,
+          "speise": {
+            "nr": 17,
+            "name": "Gyros mit Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 0
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 20.2,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        },
+        {
+          "id": 787546,
+          "speise": {
+            "nr": 16,
+            "name": "Gyros mit Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 0
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10.1,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        }
+      ],
+      "gesamtpreis": 30.299999999999997,
+      "eingangszeit": "2024-10-31T16:41:42.604Z",
+      "abholzeit": "2024-10-31T16:41:42.604Z"
+    },
+    "timestamp": "2024-10-31T17:07:10.116Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 8,
+      "speisen": [
+        {
+          "id": 268369,
+          "speise": {
+            "nr": 20,
+            "name": "Gyros mit Tzaziki und Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10.6,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        }
+      ],
+      "gesamtpreis": 10.6,
+      "eingangszeit": "2024-10-31T17:07:10.141Z",
+      "abholzeit": "2024-10-31T17:07:10.141Z"
+    },
+    "timestamp": "2024-10-31T17:07:38.037Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 9,
+      "speisen": [
+        {
+          "id": 529090,
+          "speise": {
+            "nr": 23,
+            "name": "Gyros-Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0
+              },
+              {
+                "name": "Ketchup",
+                "menge": 1,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10.6,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        }
+      ],
+      "gesamtpreis": 10.6,
+      "eingangszeit": "2024-10-31T17:07:38.061Z",
+      "abholzeit": "2024-10-31T17:07:38.061Z"
+    },
+    "timestamp": "2024-10-31T17:14:37.882Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 10,
+      "speisen": [
+        {
+          "id": 410545,
+          "speise": {
+            "nr": 23,
+            "name": "Gyros-Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 20,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 3661,
+          "speise": {
+            "nr": 20,
+            "name": "Gyros mit Tzaziki und Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 324247,
+          "speise": {
+            "nr": 30,
+            "name": "Bifteki-Feta-Platte",
+            "zutaten": [
+              {
+                "name": "Bifteki",
+                "menge": 2,
+                "überbacken": true,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 16,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 16,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 46,
+      "eingangszeit": "2024-10-31T17:14:37.908Z",
+      "abholzeit": "2024-10-31T17:14:37.908Z"
+    },
+    "timestamp": "2024-10-31T17:15:39.029Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 11,
+      "speisen": [
+        {
+          "id": 799163,
+          "speise": {
+            "nr": 19,
+            "name": "Gyros mit Krautsalat und Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 20,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 20,
+      "eingangszeit": "2024-10-31T17:15:39.052Z",
+      "abholzeit": "2024-10-31T17:15:39.052Z"
+    },
+    "timestamp": "2024-10-31T17:20:14.317Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 12,
+      "speisen": [
+        {
+          "id": 312218,
+          "speise": {
+            "nr": 23,
+            "name": "Gyros-Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 897349,
+          "speise": {
+            "nr": 30,
+            "name": "Bifteki-Feta-Platte",
+            "zutaten": [
+              {
+                "name": "Bifteki",
+                "menge": 2,
+                "überbacken": true,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 16,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 16,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 686411,
+          "speise": {
+            "nr": 6,
+            "name": "Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Pommes",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              }
+            ],
+            "preis": 8,
+            "sauce": [
+              {
+                "name": "Mayo",
+                "menge": 1
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 34,
+      "eingangszeit": "2024-10-31T17:20:14.349Z",
+      "abholzeit": "2024-10-31T17:20:14.349Z"
+    },
+    "timestamp": "2024-10-31T17:28:52.626Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 13,
+      "speisen": [
+        {
+          "id": 552336,
+          "speise": {
+            "nr": 2,
+            "name": "Gyros Box",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 0
+              }
+            ],
+            "preis": 8.5,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "ohne",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8.5,
+          "notiz": "Ohne oregano",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 691539,
+          "speise": {
+            "nr": 2,
+            "name": "Gyros Box",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 0
+              }
+            ],
+            "preis": 8.5,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "ohne",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8.5,
+          "notiz": "Ohne oregano, bisschen kleiner",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 17,
+      "eingangszeit": "2024-10-31T17:28:52.651Z",
+      "abholzeit": "2024-10-31T17:28:52.651Z"
+    },
+    "timestamp": "2024-10-31T17:30:26.666Z"
+  },
+  {
+    "auswahl": "vor Ort",
+    "bestellung": {
+      "nr": 14,
+      "speisen": [
+        {
+          "id": 657828,
+          "speise": {
+            "nr": 8,
+            "name": "Gyros Pita",
+            "zutaten": [
+              {
+                "name": "Pita",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Gyros",
+                "menge": 1
+              }
+            ],
+            "preis": 8,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "ohne",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 8,
+      "eingangszeit": "2024-10-31T17:30:26.689Z",
+      "abholzeit": "2024-10-31T17:30:26.689Z"
+    },
+    "timestamp": "2024-10-31T17:31:32.487Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 15,
+      "speisen": [
+        {
+          "id": 132958,
+          "speise": {
+            "nr": 22,
+            "name": "Gyros mit Krautsalat, Pommes und Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 11,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 11.6,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        }
+      ],
+      "gesamtpreis": 11.6,
+      "eingangszeit": "2024-10-31T17:31:32.511Z",
+      "abholzeit": "2024-10-31T17:31:32.511Z"
+    },
+    "timestamp": "2024-10-31T17:33:48.349Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 16,
+      "speisen": [
+        {
+          "id": 357436,
+          "speise": {
+            "nr": 28,
+            "name": "Leichte Grillplatte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "option": [
+              {
+                "name": "Suflaki",
+                "menge": 1
+              },
+              {
+                "name": "Hähnchen",
+                "menge": 0
+              }
+            ],
+            "preis": 13,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 13.6,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0.6
+        },
+        {
+          "id": 845734,
+          "speise": {
+            "nr": 38,
+            "name": "Softgetränke",
+            "zutaten": [],
+            "option": [
+              {
+                "name": "Cola",
+                "menge": 0
+              },
+              {
+                "name": "Fanta",
+                "menge": 1
+              },
+              {
+                "name": "Sprite",
+                "menge": 0
+              },
+              {
+                "name": "Schorle",
+                "menge": 0
+              },
+              {
+                "name": "Multi",
+                "menge": 0
+              }
+            ],
+            "preis": 2.8
+          },
+          "menge": 1,
+          "gesamtpreis": 2.8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 16.4,
+      "eingangszeit": "2024-10-31T17:33:48.384Z",
+      "abholzeit": "2024-10-31T17:33:48.384Z"
+    },
+    "timestamp": "2024-10-31T17:34:45.255Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 17,
+      "speisen": [
+        {
+          "id": 911921,
+          "speise": {
+            "nr": 17,
+            "name": "Gyros mit Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 0
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 19,
+          "notiz": "Auf eine platte ",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 19,
+      "eingangszeit": "2024-10-31T17:34:45.291Z",
+      "abholzeit": "2024-10-31T17:34:45.291Z"
+    },
+    "timestamp": "2024-10-31T17:37:48.755Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 18,
+      "speisen": [
+        {
+          "id": 602330,
+          "speise": {
+            "nr": 20,
+            "name": "Gyros mit Tzaziki und Pommes",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 8.6,
+          "notiz": "",
+          "size": "klein",
+          "aufpreis": 0.6
+        },
+        {
+          "id": 516150,
+          "speise": {
+            "nr": 22,
+            "name": "Gyros mit Krautsalat, Pommes und Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 11,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 11,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 19.6,
+      "eingangszeit": "2024-10-31T17:37:48.780Z",
+      "abholzeit": "2024-10-31T18:30:00.000Z"
+    },
+    "timestamp": "2024-10-31T17:46:20.083Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 19,
+      "speisen": [
+        {
+          "id": 711686,
+          "speise": {
+            "nr": 2,
+            "name": "Gyros Box",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 8.5,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "ohne",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8.5,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 34037,
+          "speise": {
+            "nr": 2,
+            "name": "Gyros Box",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 8.5,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "ohne",
+                "menge": 1
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8.5,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 17,
+      "eingangszeit": "2024-10-31T17:46:20.108Z",
+      "abholzeit": "2024-10-31T17:46:20.108Z"
+    },
+    "timestamp": "2024-10-31T18:11:02.425Z"
+  },
+  {
+    "auswahl": "Abholung",
+    "bestellung": {
+      "nr": 20,
+      "speisen": [
+        {
+          "id": 778336,
+          "speise": {
+            "nr": 6,
+            "name": "Manta-Platte",
+            "zutaten": [
+              {
+                "name": "Pommes",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Currywurst",
+                "menge": 1,
+                "canToggle": false
+              }
+            ],
+            "preis": 8,
+            "sauce": [
+              {
+                "name": "Mayo",
+                "menge": 1
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 16,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 522778,
+          "speise": {
+            "nr": 21,
+            "name": "Gyros mit Krautsalat und Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 0
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 26,
+      "eingangszeit": "2024-10-31T18:11:02.452Z",
+      "abholzeit": "2024-10-31T18:40:00.000Z"
+    },
+    "timestamp": "2024-10-31T18:27:04.231Z"
+  }
+]

@@ -116,6 +116,8 @@ function formatLieferung(bestellung) {
         lieferDetails.adresse = strasse;
     }
 
+    console.log("Lieferdetails", lieferDetails);
+
     return lieferDetails;
 }
 
@@ -183,9 +185,9 @@ app.post('/print', (req, res) => {
             formattedSpeisen.forEach((speise) => {
                 printer
                     .size(0.5, 0.5)
-                    .text(`${speise.menge}x Nr.${speise.nr}`)
-                    .size(0.7, 0.7)
                     .text(`${speise.size === "klein" ? `${command.TEXT_FORMAT.TXT_UNDERL2_ON}${speise.size}${command.TEXT_FORMAT.TXT_UNDERL_OFF} ` : ""}${speise.name}`)
+                    .size(0.7, 0.7)
+                    .text(`${speise.menge}x Nr.${speise.nr}`)
                     .size(0.5, 0.5)
                     .text(speise.zutatenListe)
                     .text(speise.notiz ? `${command.TEXT_FORMAT.TXT_UNDERL2_ON}HINWEIS: ${speise.notiz}${command.TEXT_FORMAT.TXT_UNDERL_OFF}` : "")
@@ -220,11 +222,11 @@ app.post('/print', (req, res) => {
                 if (lieferDetails.telefon) {
                     printer
                         .size(0.5, 0.5).text("Telefon:")
-                }
-                if (lieferDetails.strasse) {
-                    printer
                         .size(0.7, 0.7).text(lieferDetails.telefon)
-                        .size(0.5, 0.5).text("Strasse:")
+                }
+                if (lieferDetails.adresse) {
+                    printer
+                        .size(0.5, 0.5).text("Adresse:")
                         .size(0.7, 0.7).text(lieferDetails.adresse)
                 }
                 if (lieferDetails.hinweis) {
@@ -232,6 +234,8 @@ app.post('/print', (req, res) => {
                         .size(0.5, 0.5).text("Hinweis:")
                         .size(0.7, 0.7).text(lieferDetails.hinweis)
                 }
+                printer
+                .feed(4)
             }
 
             printer
@@ -421,4 +425,6 @@ app.get('/print-tagesbericht', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Printer server is running on port ${port}`);
+    console.log(`Wenn dieses Fenster geschlossen wird, funktioniert der Drucker nicht.`);
+
 });

@@ -314,7 +314,7 @@ app.post('/print', (req, res) => {
 app.get('/print-tagesumsatz', (req, res) => {
     try {
         const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-        const filePath = path.join(__dirname, `./umsatzlisten/umsatz-${date}.json`);
+        const filePath = path.join(__dirname, `../umsatzlisten/umsatz-${date}.json`);
 
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
@@ -405,7 +405,7 @@ app.get('/print-tagesumsatz', (req, res) => {
 app.get('/print-tagesbericht', (req, res) => {
     try {
         const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-        const filePath = path.join(__dirname, `./umsatzlisten/umsatz-${date}.json`);
+        const filePath = path.join(__dirname, `../umsatzlisten/umsatz-${date}.json`);
 
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {

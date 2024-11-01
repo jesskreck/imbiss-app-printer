@@ -207,5 +207,407 @@
       "abholzeit": "2024-11-01T09:37:10.209Z"
     },
     "timestamp": "2024-11-01T09:39:12.345Z"
+  },
+  {
+    "auswahl": "vor Ort",
+    "bestellung": {
+      "nr": 1,
+      "speisen": [
+        {
+          "id": 924610,
+          "speise": {
+            "nr": 10,
+            "name": "Bifteki Pita",
+            "zutaten": [
+              {
+                "name": "Pita",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Bifteki",
+                "menge": 1
+              }
+            ],
+            "preis": 8,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "ohne",
+                "menge": 1
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 725119,
+          "speise": {
+            "nr": 17,
+            "name": "Gyros mit Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 0
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 16.2,
+          "notiz": "",
+          "size": "klein",
+          "aufpreis": 0.6
+        },
+        {
+          "id": 643060,
+          "speise": {
+            "nr": 35,
+            "name": "Hähnchen (überbacken)",
+            "zutaten": [
+              {
+                "name": "Hähnchen",
+                "menge": 1,
+                "überbacken": true,
+                "canToggle": false
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Hollandaise",
+                "menge": 1
+              },
+              {
+                "name": "Metaxa",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 974472,
+          "speise": {
+            "nr": 28,
+            "name": "Leichte Grillplatte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 0
+              }
+            ],
+            "option": [
+              {
+                "name": "Suflaki",
+                "menge": 1
+              },
+              {
+                "name": "Hähnchen",
+                "menge": 0
+              }
+            ],
+            "preis": 13,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 13,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 47.2,
+      "rabatt": 0,
+      "eingangszeit": "2024-11-01T11:56:27.602Z",
+      "abholzeit": "2024-11-01T11:56:27.602Z"
+    },
+    "timestamp": "2024-11-01T12:00:22.847Z"
+  },
+  {
+    "auswahl": "vor Ort",
+    "bestellung": {
+      "nr": 1,
+      "speisen": [
+        {
+          "id": 924610,
+          "speise": {
+            "nr": 10,
+            "name": "Bifteki Pita",
+            "zutaten": [
+              {
+                "name": "Pita",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Bifteki",
+                "menge": 1
+              }
+            ],
+            "preis": 8,
+            "sauce": [
+              {
+                "name": "Cocktail",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 0
+              },
+              {
+                "name": "ohne",
+                "menge": 1
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 8,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 725119,
+          "speise": {
+            "nr": 17,
+            "name": "Gyros mit Tzaziki",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 0
+              },
+              {
+                "name": "Kraut",
+                "menge": 0
+              },
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              }
+            ],
+            "preis": 9.5,
+            "sauce": [
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 1,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 2,
+          "gesamtpreis": 16.2,
+          "notiz": "",
+          "size": "klein",
+          "aufpreis": 0.6
+        },
+        {
+          "id": 643060,
+          "speise": {
+            "nr": 35,
+            "name": "Hähnchen (überbacken)",
+            "zutaten": [
+              {
+                "name": "Hähnchen",
+                "menge": 1,
+                "überbacken": true,
+                "canToggle": false
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 1
+              }
+            ],
+            "preis": 10,
+            "sauce": [
+              {
+                "name": "Hollandaise",
+                "menge": 1
+              },
+              {
+                "name": "Metaxa",
+                "menge": 0
+              }
+            ],
+            "singleSauceOnly": true
+          },
+          "menge": 1,
+          "gesamtpreis": 10,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        },
+        {
+          "id": 974472,
+          "speise": {
+            "nr": 28,
+            "name": "Leichte Grillplatte",
+            "zutaten": [
+              {
+                "name": "Gyros",
+                "menge": 1,
+                "canToggle": false
+              },
+              {
+                "name": "Pommes",
+                "menge": 1
+              },
+              {
+                "name": "Kraut",
+                "menge": 1
+              },
+              {
+                "name": "Zwiebeln",
+                "menge": 0
+              }
+            ],
+            "option": [
+              {
+                "name": "Suflaki",
+                "menge": 1
+              },
+              {
+                "name": "Hähnchen",
+                "menge": 0
+              }
+            ],
+            "preis": 13,
+            "sauce": [
+              {
+                "name": "Tzaziki",
+                "menge": 1
+              },
+              {
+                "name": "Mayo",
+                "menge": 0,
+                "preis": 0.6
+              },
+              {
+                "name": "Ketchup",
+                "menge": 0,
+                "preis": 0.6
+              }
+            ]
+          },
+          "menge": 1,
+          "gesamtpreis": 13,
+          "notiz": "",
+          "size": "normal",
+          "aufpreis": 0
+        }
+      ],
+      "gesamtpreis": 47.2,
+      "rabatt": 0,
+      "eingangszeit": "2024-11-01T11:56:27.602Z",
+      "abholzeit": "2024-11-01T11:56:27.602Z"
+    },
+    "timestamp": "2024-11-01T12:02:40.414Z"
   }
 ]

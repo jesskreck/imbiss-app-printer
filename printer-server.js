@@ -103,27 +103,27 @@ function generateLists(speisen) {
         const { nr, name, zutaten, option, sauce, preis } = speise;
 
         const einzelpreis = gesamtpreis / menge;
-        const preisText = menge >= 2 
+        const preisText = menge >= 2
             ? `${menge} x ${einzelpreis.toFixed(2)} EUR = ${gesamtpreis.toFixed(2)} EUR`
             : `${gesamtpreis.toFixed(2)} EUR`;
 
         // Filtere Zutatenliste für nur Kraut und Zwiebeln
         const zutatenListe = Array.isArray(zutaten)
             ? zutaten.filter(zutat => zutat.name === "Kraut" || zutat.name === "Zwiebeln")
-                      .map(zutat => `${zutat.menge > 1 ? `${zutat.menge}x ` : ''}${zutat.name}`)
-                      .join(', ')
+                .map(zutat => `${zutat.menge > 1 ? `${zutat.menge}x ` : ''}${zutat.name}`)
+                .join(', ')
             : '';
 
         const optionListe = Array.isArray(option)
             ? option.filter(o => o.menge > 0)
-                     .map(o => `${o.menge > 1 ? `${o.menge}x ` : ''}${o.name}`)
-                     .join(', ')
+                .map(o => `${o.menge > 1 ? `${o.menge}x ` : ''}${o.name}`)
+                .join(', ')
             : '';
 
         const saucenListe = Array.isArray(sauce)
             ? sauce.filter(s => s.menge > 0)
-                    .map(s => `${s.menge > 1 ? `${s.menge}x ` : ''}${s.name}`)
-                    .join(', ')
+                .map(s => `${s.menge > 1 ? `${s.menge}x ` : ''}${s.name}`)
+                .join(', ')
             : '';
 
         return {
@@ -236,18 +236,18 @@ app.post('/print', (req, res) => {
                     .size(0.7, 0.7)
                     .text(`${speise.menge}x Nr.${speise.nr} ${speise.size === "klein" ? `(${command.TEXT_FORMAT.TXT_UNDERL2_ON}${speise.size}${command.TEXT_FORMAT.TXT_UNDERL_OFF})` : ""}`)
                     .size(0.5, 0.5)
-                if (speise.zutatenListe) {
-                    printer.text(speise.zutatenListe);
-                }
                 if (speise.optionListe) {
                     printer.text(speise.optionListe);
+                }
+                if (speise.zutatenListe) {
+                    printer.text(speise.zutatenListe);
                 }
                 if (speise.saucenListe) {
                     printer.text(speise.saucenListe);
                 }
                 printer
                     .text(speise.notiz ? `${command.TEXT_FORMAT.TXT_BI_ON}HINWEIS: ${speise.notiz}${command.TEXT_FORMAT.TXT_BI_OFF}` : "")
-                    .text(preisText)
+                    .text(speise.preisText)
                     .feed(2);
 
             });
@@ -310,20 +310,16 @@ app.post('/print', (req, res) => {
 });
 
 //////////////////////////////////////////////////////////////////// TAGESUMSATZ ////////////////////////////////////////////////////////////////////
-
 app.get('/print-tagesumsatz', (req, res) => {
     try {
         const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
         const filePath = path.join(__dirname, `../umsatzlisten/umsatz-${date}.json`);
-
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
                 return res.status(500).json({ success: false, message: 'Fehler beim Laden der Umsatzdaten' });
             }
-
             const jsonData = JSON.parse(data);
             const totalUmsatz = jsonData.reduce((acc, order) => acc + order.bestellung.gesamtpreis, 0);
-
             const orderCounts = jsonData.reduce(
                 (counts, order) => {
                     if (order.auswahl === 'vor Ort') counts.vorOrt += 1;
@@ -333,31 +329,24 @@ app.get('/print-tagesumsatz', (req, res) => {
                 },
                 { vorOrt: 0, abholung: 0, lieferung: 0 }
             );
-
             const totalOrders = orderCounts.vorOrt + orderCounts.abholung + orderCounts.lieferung;
-
             // Umsatzverteilung berechnen
             const percentVorOrt = ((orderCounts.vorOrt / totalOrders) * 100).toFixed(0);
             const percentAbholung = ((orderCounts.abholung / totalOrders) * 100).toFixed(0);
             const percentLieferung = ((orderCounts.lieferung / totalOrders) * 100).toFixed(0);
-
             // Erste und letzte Bestellung für den Quality Check
             const firstOrderTime = formatDateTime(new Date(new Date(jsonData[0].bestellung.eingangszeit)));
             const lastOrderTime = formatDateTime(new Date(new Date(jsonData[jsonData.length - 1].bestellung.eingangszeit)));
-
             const currentTime = formatTime(new Date());
             const formattedDate = formatDate(date);
-
             // Drucken
             const device = new escpos.USB();
             const options = { encoding: 'CP437' };
             const printer = new escpos.Printer(device, options);
-
             device.open((error) => {
                 if (error) {
                     return res.status(500).json({ success: false, error: error.message });
                 }
-
                 printer
                     .align('CT')
                     .size(0.5, 0.5).text("********************************")
@@ -389,7 +378,6 @@ app.get('/print-tagesumsatz', (req, res) => {
                     .feed(2)
                     .cut()
                     .close();
-
                 res.json({ success: true });
             });
         });
@@ -398,98 +386,49 @@ app.get('/print-tagesumsatz', (req, res) => {
         res.status(500).json({ success: false, message: 'Fehler beim Drucken des Tagesumsatzes' });
     }
 });
-
 //////////////////////////////////////////////////////////////////// TAGESBERICHT ////////////////////////////////////////////////////////////////////
-
-
 app.get('/print-tagesbericht', (req, res) => {
     try {
-        const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-        const filePath = path.join(__dirname, `../umsatzlisten/umsatz-${date}.json`);
-
+        const filePath = path.join(__dirname, `../umsatzlisten/umsatz-${new Date().toISOString().split('T')[0]}.json`);
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
                 return res.status(500).json({ success: false, message: 'Fehler beim Lesen der Umsatzdatei.' });
             }
-
-            const jsonData = JSON.parse(data);
-
-            // Berechnungen für Tagesumsatz
-            const totalUmsatz = jsonData.reduce((acc, order) => acc + order.bestellung.gesamtpreis, 0);
-            const orderCounts = jsonData.reduce((counts, order) => {
-                if (order.auswahl === 'vor Ort') counts.vorOrt += 1;
-                else if (order.auswahl === 'Abholung') counts.abholung += 1;
-                else if (order.auswahl === 'Lieferung') counts.lieferung += 1;
-                return counts;
-            }, { vorOrt: 0, abholung: 0, lieferung: 0 });
-
-            const totalOrders = orderCounts.vorOrt + orderCounts.abholung + orderCounts.lieferung;
-            const percentVorOrt = ((orderCounts.vorOrt / totalOrders) * 100).toFixed(0);
-            const percentAbholung = ((orderCounts.abholung / totalOrders) * 100).toFixed(0);
-            const percentLieferung = ((orderCounts.lieferung / totalOrders) * 100).toFixed(0);
-            const firstOrderTime = formatDateTime(new Date(new Date(jsonData[0].bestellung.eingangszeit)));
-            const lastOrderTime = formatDateTime(new Date(new Date(jsonData[jsonData.length - 1].bestellung.eingangszeit)));
-            const currentTime = formatTime(new Date());
-            const formattedDate = formatDate(date);
-
-            // Berechnungen für Tagesbericht
+            const bestellungen = JSON.parse(data);
             const speisenMap = {};
-            jsonData.forEach((order) => {
-                order.bestellung.speisen.forEach((speiseBestellt) => {
+            // Iteriere über alle Bestellungen und Speisen, um die Anzahl zu zählen
+            bestellungen.forEach((bestellung) => {
+                bestellung.bestellung.speisen.forEach((speiseBestellt) => {
                     const speiseNr = speiseBestellt.speise.nr;
-                    if (!speisenMap[speiseNr]) speisenMap[speiseNr] = 0;
+                    if (!speisenMap[speiseNr]) {
+                        speisenMap[speiseNr] = 0;
+                    }
                     speisenMap[speiseNr] += speiseBestellt.menge;
                 });
             });
-
+            // Sortiere die Speisen nach der Anzahl
             const sortierteSpeisen = Object.entries(speisenMap).sort((a, b) => b[1] - a[1]);
             const reportLines = sortierteSpeisen.map(([speiseNr, menge]) => `Nr.${speiseNr}: ${menge}x`).join('\n');
-
+            const now = new Date();
+            const firstOrderTime = formatDateTime(new Date(new Date(bestellungen[0].bestellung.eingangszeit)));
+            const lastOrderTime = formatDateTime(new Date(new Date(bestellungen[bestellungen.length - 1].bestellung.eingangszeit)));
+            const reportTime = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+            const reportDate = `${String(now.getDate()).padStart(2, '0')}.${String(now.getMonth() + 1).padStart(2, '0')}.${now.getFullYear()}`;
+            // Sende den Bericht an den Drucker
             const device = new escpos.USB();
             const options = { encoding: 'CP437' };
             const printer = new escpos.Printer(device, options);
-
             device.open((error) => {
                 if (error) {
+                    console.error('Error opening device:', error);
                     return res.status(500).json({ success: false, error: error.message });
                 }
-
-                // Tagesumsatz drucken
-                printer
-                    .align('CT')
-                    .size(0.5, 0.5).text("********************************")
-                    .size(1, 1).text("Tagesumsatz")
-                    .size(0.7, 0.7).text(formattedDate)
-                    .size(0.5, 0.5).text(`Stand: ${currentTime} Uhr`)
-                    .text("********************************")
-                    .feed(1)
-                    .align('LT')
-                    .text(`Umsatz: ${totalUmsatz.toFixed(2)} EUR`)
-                    .text('Gesamt: ' + totalOrders + ' Bestellungen')
-                    .text('===============================')
-                    .text(`Vor Ort: ${orderCounts.vorOrt}`)
-                    .text(`Abholung: ${orderCounts.abholung}`)
-                    .text(`Lieferung: ${orderCounts.lieferung}`)
-                    .feed(1)
-                    .text('Umsatzverteilung')
-                    .text('===============================')
-                    .text(`Vor Ort: ${percentVorOrt}%`)
-                    .text(`Abholung: ${percentAbholung}%`)
-                    .text(`Lieferung: ${percentLieferung}%`)
-                    .feed(1)
-                    .text('Vollständigkeitscheck')
-                    .text('===============================')
-                    .text(`Erste Bestellung: \n ${firstOrderTime} Uhr`)
-                    .text(`Letzte Bestellung: \n ${lastOrderTime} Uhr`)
-                    .feed(2);
-
-                // Tagesbericht drucken
                 printer
                     .align('CT')
                     .size(0.5, 0.5).text("********************************")
                     .size(1, 1).text("Tagesbericht")
-                    .size(0.7, 0.7).text(formattedDate)
-                    .size(0.5, 0.5).text(`Stand: ${currentTime} Uhr`)
+                    .size(0.7, 0.7).text(reportDate)
+                    .size(0.5, 0.5).text(`Stand: ${reportTime} Uhr`)
                     .text("********************************")
                     .feed(1)
                     .align('LT')
@@ -504,7 +443,6 @@ app.get('/print-tagesbericht', (req, res) => {
                     .feed(2)
                     .cut()
                     .close();
-
                 res.json({ success: true });
             });
         });

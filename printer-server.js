@@ -7,7 +7,7 @@ const escpos = require('escpos');
 const { command } = escpos;
 
 
-const { readOrderCounter, incrementOrderNumber } = require('./orderCounter');
+const { readOrderCounter, incrementOrderNumber } = require('../orderCounter');
 const { saveOrderToJSON } = require('./orderFileStorage');
 
 escpos.USB = require('escpos-usb');

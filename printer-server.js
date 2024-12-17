@@ -7,7 +7,7 @@ const escpos = require('escpos');
 const { command } = escpos;
 
 
-const { readOrderCounter, incrementOrderNumber } = require('./orderCounter');
+const { readOrderCounter, initializeOrderCounter, incrementOrderNumber } = require('./orderCounter');
 const { saveOrderToJSON } = require('./orderFileStorage');
 
 escpos.USB = require('escpos-usb');
@@ -18,14 +18,14 @@ const port = 3001;
 app.use(cors());
 app.use(express.json());
 
+//Nr-Counter initialisieren bevor Server Anfragen bearbeitet
+initializeOrderCounter();
 
 // Endpunkt für aktuelle Bestellnummer
 app.get('/order-number', (req, res) => {
     const data = readOrderCounter();
     res.json({ orderNumber: data.orderNumber });
 });
-
-//TEST
 
 //////////////////////////////////////////////////////////////////// HILFSFUNKTIONEN ////////////////////////////////////////////////////////////////////
 
@@ -56,47 +56,6 @@ function formatDateTime(date) {
 }
 
 
-function formatSpeisen(speisen) {
-    return speisen.map((item) => {
-        const { menge, speise, gesamtpreis, size, notiz } = item;
-        const { nr, name, zutaten, option, sauce } = speise;
-
-        // Bereite die Zutatenliste als einzelnen String vor, nur wenn Menge > 0
-        const zutatenListe = Array.isArray(zutaten)
-            ? zutaten
-                .filter((zutat) => zutat.menge > 0) // Filtere Zutaten mit Menge = 0 heraus
-                .map((zutat) => `${zutat.menge > 1 ? `${zutat.menge}x ` : ''}${zutat.name}`) // Zeige Menge nur an, wenn > 1
-                .join(', ')
-            : '';
-
-        const optionListe = Array.isArray(option)
-            ? option
-                .filter((o) => o.menge > 0) // Filtere Zutaten mit Menge = 0 heraus
-                .map((o) => `${o.menge > 1 ? `${o.menge}x ` : ''}${o.name}`) // Zeige Menge nur an, wenn > 1
-                .join(', ')
-            : '';
-
-        const sauceListe = Array.isArray(sauce)
-            ? sauce
-                .filter((s) => s.menge > 0) // Filtere Saucen mit Menge = 0 heraus
-                .map((s) => `${s.menge > 1 ? `${s.menge}x ` : ''}${s.name}`) // Zeige Menge nur an, wenn > 1
-                .join(', ')
-            : '';
-
-        // Kombiniere Zutaten und Saucen
-        const gesamtListe = zutatenListe + (optionListe ? `, ${optionListe}` : '') + (sauceListe ? `, ${sauceListe}` : '');
-
-        return {
-            menge,
-            nr,
-            name,
-            size,
-            zutatenListe: gesamtListe,
-            gesamtpreis,
-            notiz
-        };
-    });
-}
 
 function generateLists(speisen) {
     return speisen.map((item) => {
@@ -111,7 +70,9 @@ function generateLists(speisen) {
         // Filtere Zutatenliste für nur Kraut und Zwiebeln
         const zutatenListe = Array.isArray(zutaten)
             ? zutaten
-                .filter(zutat => (zutat.name === "Kraut" || zutat.name === "Zwiebeln") && zutat.menge > 0)
+                .filter(zutat =>
+                    ((nr === 7.1 || nr === 7.2) && zutat.menge > 0)
+                    || (zutat.name === "Kraut" || zutat.name === "Zwiebeln") && zutat.menge > 0)
                 .map(zutat => `${zutat.menge > 1 ? `${zutat.menge}x ` : ''}${zutat.name}`)
                 .join(', ')
             : '';
@@ -177,12 +138,13 @@ function formatLieferung(bestellung) {
 app.post('/print', (req, res) => {
     try {
         // Daten abfangen
-        console.log('Eingehende Bestellung:', req.body);
+        console.log('Eingehender reg.body:', req.body);
         const { auswahl, bestellung } = req.body;
         const { nr, speisen, gesamtpreis, eingangszeit, abholzeit, liefergebuehr } = bestellung;
 
         // Daten formatieren
         const formattedSpeisen = generateLists(speisen);
+        console.log("formattedSpeisen:", formattedSpeisen);
         const eingang = formatTime(new Date(eingangszeit));
         const abhol = formatTime(new Date(abholzeit));
         const summe = gesamtpreis.toFixed(2);
@@ -218,6 +180,7 @@ app.post('/print', (req, res) => {
                 .feed(2)
                 .size(0.5, 0.5)
                 .text("********************************")
+                .size(0.7, 0.7)
             if (eingang === abhol) {
                 printer.text('sofort');
             } else {
@@ -226,6 +189,7 @@ app.post('/print', (req, res) => {
             }
 
             printer
+                .size(0.5, 0.5)
                 .text("********************************")
                 .feed(1)
 

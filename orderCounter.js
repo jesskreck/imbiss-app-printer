@@ -18,6 +18,18 @@ function readOrderCounter() {
   }
 }
 
+// Hilfsfunktion zum Initialisieren des Order Counters beim Start
+function initializeOrderCounter() {
+  const currentDate = new Date().toISOString().split('T')[0];
+  let data = readOrderCounter();
+
+  // Überprüfen, ob das gespeicherte Datum nicht aktuell ist
+  if (data.date !== currentDate) {
+    data = { date: currentDate, orderNumber: 1 };
+    fs.writeFileSync(orderCounterFile, JSON.stringify(data, null, 2));
+  }
+}
+
 // Hilfsfunktion zum Hochzählen der Bestellnummer
 function incrementOrderNumber() {
   const currentDate = new Date().toISOString().split('T')[0];
@@ -32,4 +44,4 @@ function incrementOrderNumber() {
   fs.writeFileSync(orderCounterFile, JSON.stringify(data, null, 2));
 }
 
-module.exports = { readOrderCounter, incrementOrderNumber };
+module.exports = { readOrderCounter, initializeOrderCounter, incrementOrderNumber };

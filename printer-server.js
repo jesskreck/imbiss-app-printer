@@ -131,6 +131,11 @@ function formatLieferung(bestellung) {
     return lieferDetails;
 }
 
+function calculateGesamtpreis(gesamtpreis, discountRate, liefergebuehr) {
+    const summe = gesamtpreis - (gesamtpreis * ( discountRate / 100)) + liefergebuehr
+
+    return summe;
+}
 
 //////////////////////////////////////////////////////////////////// AUSDRUCK BESTELLUNGEN ////////////////////////////////////////////////////////////////////
 
@@ -140,14 +145,13 @@ app.post('/print', (req, res) => {
         // Daten abfangen
         console.log('Eingehender reg.body:', req.body);
         const { auswahl, bestellung } = req.body;
-        const { nr, speisen, gesamtpreis, eingangszeit, abholzeit, liefergebuehr } = bestellung;
+        const { nr, speisen, gesamtpreis, discountRate, eingangszeit, abholzeit, liefergebuehr } = bestellung;
 
         // Daten formatieren
         const formattedSpeisen = generateLists(speisen);
-        console.log("formattedSpeisen:", formattedSpeisen);
         const eingang = formatTime(new Date(eingangszeit));
         const abhol = formatTime(new Date(abholzeit));
-        const summe = gesamtpreis.toFixed(2);
+        const summe = calculateGesamtpreis(gesamtpreis, discountRate, liefergebuehr);
 
         // Daten aufbereiten falls Lieferung
         let lieferDetails = '';
@@ -157,6 +161,14 @@ app.post('/print', (req, res) => {
 
         // Daten in JSON Umsatzlisten abspeichern
         saveOrderToJSON({ auswahl, bestellung, timestamp: new Date().toISOString() });
+
+        //TESTS
+        console.log("gesamtpreis", gesamtpreis);
+        console.log("Rabatt", discountRate);
+        console.log("Liefergebühr", liefergebuehr);
+        console.log("Summe", summe);
+        
+
 
         // Drucken
         const device = new escpos.USB();
@@ -224,14 +236,22 @@ app.post('/print', (req, res) => {
             printer
                 .feed(1)
                 .align("CT")
-            if (lieferDetails.liefergebuehr) {
+
+            if (discountRate >= 1) {
+                printer
+                    .size(0.5, 0.5)
+                    .text(`Vorläufiger Preis: ${gesamtpreis.toFixed(2)} EUR`)
+                    .text(`Rabatt: ${discountRate}%`)
+
+            }
+            if (liefergebuehr) {
                 printer
                     .size(0.5, 0.5)
                     .text(`Liefergebühr: ${liefergebuehr.toFixed(2)} EUR`)
             }
             printer
                 .size(0.7, 0.7)
-                .text(`Total: ${summe} EUR`)
+                .text(`Total: ${summe.toFixed(2)} EUR`)
                 .feed(2)
 
             if (lieferDetails) {

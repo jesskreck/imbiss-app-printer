@@ -132,7 +132,10 @@ function formatLieferung(bestellung) {
 }
 
 function calculateGesamtpreis(gesamtpreis, discountRate, liefergebuehr) {
-    const summe = gesamtpreis - (gesamtpreis * (discountRate / 100)) + liefergebuehr
+    const validDiscountRate = discountRate ?? 0;
+
+    const summe = gesamtpreis - (gesamtpreis * (validDiscountRate / 100)) + liefergebuehr;
+    console.log("summen:", gesamtpreis, validDiscountRate, liefergebuehr);
 
     return summe;
 }
@@ -163,12 +166,7 @@ app.post('/print', (req, res) => {
         saveOrderToJSON({ auswahl, bestellung, timestamp: new Date().toISOString() });
 
         //TESTS
-        console.log("gesamtpreis", gesamtpreis);
-        console.log("Rabatt", discountRate);
-        console.log("Liefergebühr", liefergebuehr);
-        console.log("Summe", summe);
-
-
+    
 
         // Drucken
         const device = new escpos.USB();

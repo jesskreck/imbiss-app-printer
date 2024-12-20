@@ -132,7 +132,7 @@ function formatLieferung(bestellung) {
 }
 
 function calculateGesamtpreis(gesamtpreis, discountRate, liefergebuehr) {
-    const summe = gesamtpreis - (gesamtpreis * ( discountRate / 100)) + liefergebuehr
+    const summe = gesamtpreis - (gesamtpreis * (discountRate / 100)) + liefergebuehr
 
     return summe;
 }
@@ -167,7 +167,7 @@ app.post('/print', (req, res) => {
         console.log("Rabatt", discountRate);
         console.log("Liefergebühr", liefergebuehr);
         console.log("Summe", summe);
-        
+
 
 
         // Drucken
@@ -188,7 +188,14 @@ app.post('/print', (req, res) => {
                 .feed(5)
                 .align("CT")
                 .size(1, 1)
-                .text(`${auswahl} Nr.${nr}`)
+
+            if (auswahl === 'Lieferung') {
+                printer.text(`${auswahl} zu ${abhol} Uhr`);
+            } else {
+                printer.text(`${auswahl} Nr.${nr}`);
+            }                
+            
+            printer
                 .feed(2)
                 .size(0.5, 0.5)
                 .text("********************************")
@@ -365,8 +372,16 @@ app.get('/print-tagesumsatz', (req, res) => {
                     .text(`Letzte Bestellung: \n ${lastOrderTime} Uhr`)
                     .feed(2)
                     .cut()
-                    .close();
-                res.json({ success: true });
+                    .close(() => {
+                        // Datei löschen, nachdem der Druck abgeschlossen ist
+                        fs.unlink(filePath, (deleteErr) => {
+                            if (deleteErr) {
+                                console.error('Fehler beim Löschen:', deleteErr);
+                                return res.status(500).json({ success: false, message: 'Fehler beim Löschen' });
+                            }
+                            res.json({ success: true });
+                        });
+                    });
             });
         });
     } catch (error) {

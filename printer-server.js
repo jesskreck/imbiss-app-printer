@@ -188,7 +188,9 @@ app.post('/print', (req, res) => {
                 .size(1, 1)
 
             if (auswahl === 'Lieferung') {
-                printer.text(`${auswahl} zu ${abhol} Uhr`);
+                printer
+                .text(`${auswahl} zu`)
+                .text(`${abhol} Uhr`);
             } else {
                 printer.text(`${auswahl} Nr.${nr}`);
             }                
